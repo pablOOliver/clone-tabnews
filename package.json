@@ -4,7 +4,9 @@
   "description": "Bem-vindo ao meu repositório no GitHub! Aqui, você encontrará um clone do TabNews do Felipe Deschamps, um site que oferece conteúdo para pessoas que trabalham com programação e tecnologia. Este clone foi criado com a ajuda do próprio Felipe Deschamps, que me ensinou tudo o que eu precisava saber para replicar o site.",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev"
+    "dev": "next dev",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write ."
   },
   "author": "",
   "license": "MIT",
@@ -12,5 +14,8 @@
     "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
   }
 }
