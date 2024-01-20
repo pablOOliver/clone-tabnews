@@ -7,5 +7,5 @@ function Home() {
     </div>
   );
 }
-
+// teste commit
 export default Home;
