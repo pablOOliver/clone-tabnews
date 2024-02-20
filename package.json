@@ -4,14 +4,14 @@
   "description": "Bem-vindo ao meu repositório no GitHub! Aqui, você encontrará um clone do TabNews do Felipe Deschamps, um site que oferece conteúdo para pessoas que trabalham com programação e tecnologia. Este clone foi criado com a ajuda do próprio Felipe Deschamps, que me ensinou tudo o que eu precisava saber para replicar o site.",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run services:up && next dev",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "compose": "docker-compose -f infra/compose.yaml up -d",
-    "down": "docker-compose -f infra/compose.yaml down",
-    "up": "npm run compose && npm run dev && npm run test"
+    "services:up": "docker-compose -f infra/compose.yaml up -d",
+    "services:stop": "docker-compose -f infra/compose.yaml stop",
+    "services:down": "docker-compose -f infra/compose.yaml down"
   },
   "author": "",
   "license": "MIT",
