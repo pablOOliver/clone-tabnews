@@ -17,9 +17,7 @@
     "migration:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
     "migration:down": "node-pg-migrate down -d postgres",
     "wait-for-postgres": "node infra/scripts/wait-for-postgres.js"
-  }
-
-,
+  },
   "author": "",
   "license": "MIT",
   "dependencies": {
