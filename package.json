@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Bem-vindo ao meu repositório no GitHub! Aqui, você encontrará um clone do TabNews do Felipe Deschamps, um site que oferece conteúdo para pessoas que trabalham com programação e tecnologia. Este clone foi criado com a ajuda do próprio Felipe Deschamps, que me ensinou tudo o que eu precisava saber para replicar o site.",
   "main": "index.js",
-"scripts": {
+  "scripts": {
     "dev": "npm run services:up && npm run wait-for-postgres && npm run migration:up && next dev",
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
