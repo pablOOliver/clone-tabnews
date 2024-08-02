@@ -1,8 +1,6 @@
-import { run } from "jest";
 import database from "infra/database.js";
 import migrationRunner from "node-pg-migrate";
 import { join } from "node:path";
-import { error } from "node:console";
 export default async function migrations(request, response) {
   const alawedMethods = ["GET", "POST"];
   if (!alawedMethods.includes(request.method)) {

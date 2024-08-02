@@ -1,5 +1,5 @@
 import { Client } from "pg";
-import async from "../pages/api/v1/migrations/index";
+//import async from "../pages/api/v1/migrations/index";
 async function query(queryObject) {
   let client;
   try {
@@ -27,10 +27,11 @@ async function getNewClient() {
   await client.connect();
   return client;
 }
-export default {
+const database = {
   query,
   getNewClient,
 };
+export default database;
 function getSSLValues() {
   if (process.env.POSTGRES_CA) {
     return {
