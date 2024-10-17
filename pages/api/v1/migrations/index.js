@@ -21,7 +21,7 @@ export default async function migrations(request, response) {
     };
     if (request.method === "GET") {
       const penddingMigrations = await migrationRunner(
-        migrationsOptionsDefault
+        migrationsOptionsDefault,
       );
       response.status(200).json(penddingMigrations);
     }
