@@ -19,7 +19,7 @@ function checkPostgres() {
 
 function showLoadingMessage() {
   process.stdout.write(
-    `\r${loadingSpinner[spinnerIndex]} Aguardando o PostgreSQL aceitar a conexão...`
+    `\r${loadingSpinner[spinnerIndex]} Aguardando o PostgreSQL aceitar a conexão...`,
   );
   spinnerIndex = (spinnerIndex + 1) % loadingSpinner.length;
 }
