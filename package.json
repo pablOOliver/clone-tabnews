@@ -4,7 +4,7 @@
   "description": "Bem-vindo ao meu repositório no GitHub! Aqui, você encontrará um clone do TabNews do Felipe Deschamps, um site que oferece conteúdo para pessoas que trabalham com programação e tecnologia. Este clone foi criado com a ajuda do próprio Felipe Deschamps, que me ensinou tudo o que eu precisava saber para replicar o site.",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run services:up && npm run wait-for-postgres && npm run migration:up && next dev",
+    "dev": "npm run services:up && npm run services:wait:database && npm run migration:up && next dev",
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
     "lint:eslint:check": "next lint --dir .",
@@ -13,10 +13,10 @@
     "services:up": "docker-compose -f infra/compose.yaml up -d",
     "services:stop": "docker-compose -f infra/compose.yaml stop",
     "services:down": "docker-compose -f infra/compose.yaml down",
+    "services:wait:database": "node infra/scripts/wait-for-postgres.js",
     "migration:create": "node-pg-migrate create -m infra/migrations",
     "migration:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
     "migration:down": "node-pg-migrate down -d postgres",
-    "wait-for-postgres": "node infra/scripts/wait-for-postgres.js",
     "prepare": "husky",
     "commit": "cz"
   },
